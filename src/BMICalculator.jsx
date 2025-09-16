@@ -11,8 +11,11 @@ export default function BMICalculator() {
         e.preventDefault();
 
     if (!weight || !height) {
-        setBmi(null);
-        setCategory("⚠ Please enter valid weight and height.");
+        swal({
+            title: "Error",
+            text: "Fill the Data properly",
+            icon: "warning"
+        });
         return;
     }
 
