@@ -10,7 +10,7 @@ export default function BMICalculator() {
     function calculateBMI(e) {
         e.preventDefault();
 
-    if (!weight || !height) {
+    if (!weight || !height || weight==0 || height==0) {
         swal({
             title: "Error",
             text: "Fill the Data properly",
